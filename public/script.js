@@ -16,6 +16,10 @@ new Vue({
         isLoading: false
     },
     computed: {
+        hasNoMoreResults: function() {
+            console.log("Calling me.....");
+            return (this.results.length <= this.items.length) && this.results.length > 0;
+        }
 
     },
     filters: {
